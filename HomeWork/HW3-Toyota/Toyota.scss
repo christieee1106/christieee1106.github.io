@@ -1,0 +1,181 @@
+@import "reset";
+
+.top{
+    width: 960px;
+    // height: 150px;
+    margin: 50px auto 100px auto ;
+    text-align: center;
+    line-height: 2;
+    
+    h2{
+        font-size: 40px;
+    }
+    .borderbtn{
+        border-bottom: 3px solid #000;
+        width: 40px;
+        margin: auto;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .fiveAdventages{
+        display: flex;
+        justify-content: center;
+    }
+    .five{
+        border:2px dotted #ccc ;
+        border-bottom: 3px solid #bb0404;
+        margin: 50px 5px 0px 0px;
+        width: 184px;
+        height: 32px;
+        
+    }
+}
+
+// item 5個元件
+.item {
+    width: 960px;
+    margin: auto;
+    height: 850px;
+    // display: flex;
+    position: relative;
+
+    // BlackRedBlock
+    .BlackRed{
+    width: 355px;
+    // height: 385px;
+    // position: absolute;
+    top: 50px;
+    }
+    .RedPartText{
+        width: 355px;
+        height:136px ;
+        background-color: #bb0404;
+        color: #fff;
+        display: flex;
+        font-size: 50px;
+        font-weight: lighter;
+        .p{
+            width: 34%;
+            height: 100%;
+            text-align: center;
+            transform:rotate(90deg);
+            font-size: 130px;
+        }
+        .h3{
+            width: 66%;
+            height: 100%;
+            text-align: center;
+            padding-top: 14.5%;
+        }
+    }
+    .BlackPartText{
+        width: 355px;
+        height:249px ;
+        background-color: black;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+
+        .bigP{
+            font-size: 26px;
+            margin: 20px 15px 0px 20px;
+
+        }
+
+        .smallP{
+            font-size:20px;
+            margin: 0px 20px 0px 20px;
+            color:rgba(#fff,.7);
+        }
+    }
+
+    // bgcBlock
+    .bgc{
+        background-color:#f4f4f4 ;
+        width: 440px;
+        height: 290px;
+        position: absolute;
+        right: 0;
+        top:40px ;
+        z-index: -1;
+    }
+
+    // picBlock
+    .PicYT{
+        display: flex;
+        // justify-content: center;
+        margin-top: -249px;
+        padding-left: 185px;
+        z-index: -1;
+        position: relative;
+        
+        .youtube{
+            // width: 85%;
+            right: 7%;
+            top: 46%;
+            position: absolute;
+            z-index: 5;
+        }
+    }
+
+    // textBlock
+    .text{
+        width: 650px;
+        // height: 243px;
+        background-color: #f4f4f4;
+        position: relative;
+        bottom: 30px;
+        left: 65px;
+        line-height: 1.5;
+        padding: 10px 10px 10px 20px;
+
+        .redP{
+            color:#b90404e7 ;
+            font-size: 16px;
+            font-weight: bold;
+            padding-top:5px ;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        // 失敗的redP::after
+        // .redP::after{
+        //     border:2px solid #b90404e7;
+        //     width:516px ;
+        //     height: 2px;
+        // }
+
+        .redP::after{
+            content:"";
+            background-color:#b90404e7 ;
+            height: 1px;
+            width:480px ;
+        }
+
+        span{
+            font-size: 16px;
+            background-color:#000;
+            color: #fff;
+            height: 25px;
+            border-radius: 3px;
+            padding:5px ;
+        }
+        li{
+            font-size: 15px;
+            color: rgba(0,0,0,.5);
+            padding-bottom: 5px;
+            padding-top: 3px;
+            list-style-type: disc ;
+            text-indent: -5px;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+    }
+
+    
+
+
+}

@@ -1,0 +1,314 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.top {
+  width: 960px;
+  margin: 50px auto 100px auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.top h2 {
+  font-size: 40px;
+}
+
+.top .borderbtn {
+  border-bottom: 3px solid #000;
+  width: 40px;
+  margin: auto;
+}
+
+.top a {
+  text-decoration: none;
+  color: black;
+}
+
+.top .fiveAdventages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top .five {
+  border: 2px dotted #ccc;
+  border-bottom: 3px solid #bb0404;
+  margin: 50px 5px 0px 0px;
+  width: 184px;
+  height: 32px;
+}
+
+.item {
+  width: 960px;
+  margin: auto;
+  height: 850px;
+  position: relative;
+}
+
+.item .BlackRed {
+  width: 355px;
+  top: 50px;
+}
+
+.item .RedPartText {
+  width: 355px;
+  height: 136px;
+  background-color: #bb0404;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.item .RedPartText .p {
+  width: 34%;
+  height: 100%;
+  text-align: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 130px;
+}
+
+.item .RedPartText .h3 {
+  width: 66%;
+  height: 100%;
+  text-align: center;
+  padding-top: 14.5%;
+}
+
+.item .BlackPartText {
+  width: 355px;
+  height: 249px;
+  background-color: black;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.5;
+}
+
+.item .BlackPartText .bigP {
+  font-size: 26px;
+  margin: 20px 15px 0px 20px;
+}
+
+.item .BlackPartText .smallP {
+  font-size: 20px;
+  margin: 0px 20px 0px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.item .bgc {
+  background-color: #f4f4f4;
+  width: 440px;
+  height: 290px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: -1;
+}
+
+.item .PicYT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -249px;
+  padding-left: 185px;
+  z-index: -1;
+  position: relative;
+}
+
+.item .PicYT .youtube {
+  right: 7%;
+  top: 46%;
+  position: absolute;
+  z-index: 5;
+}
+
+.item .text {
+  width: 650px;
+  background-color: #f4f4f4;
+  position: relative;
+  bottom: 30px;
+  left: 65px;
+  line-height: 1.5;
+  padding: 10px 10px 10px 20px;
+}
+
+.item .text .redP {
+  color: #b90404e7;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item .text .redP::after {
+  content: "";
+  background-color: #b90404e7;
+  height: 1px;
+  width: 480px;
+}
+
+.item .text span {
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  height: 25px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.item .text li {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+  padding-top: 3px;
+  list-style-type: disc;
+  text-indent: -5px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Toyota.css.map */
