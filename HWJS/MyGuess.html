@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Let's Guess!</title>
+    <style>
+        .container {
+            width: 50%;
+        }
+
+        .showRange {
+            width: 25%;
+            height: 50px;
+            margin: 10px auto;
+            border: 1px solid #000;
+            font-size: 72px;
+            text-align: center;
+        }
+
+        .guess {
+            height: 30px;
+            width: 15%;
+            border: 1px solid #000;
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .keypad{
+            width: 140px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="showRange my-4"></div>
+    <div class="container w-50 m-auto">
+        <button class="start btn btn-primary d-block m-auto mb-2">開始猜囉!</button>
+        <div class="guess my-4"></div>
+        <div class="keypad d-flex flex-wrap justify-content-evenly align-items-center m-auto"></div>
+    </div>
+
+    <script>
+        let showRange = document.querySelector('.showRange');
+        let start = document.querySelector('.start');
+        let guess = document.querySelector('.guess');
+        let keypad = document.querySelector('.keypad');
+
+        let min,max,ans;
+
+        let keypad_array=[1,2,3,4,5,6,7,8,9,'X',0,'V'];
+        keypad_array.forEach(function (item) {
+            let button = document.createElement("button");
+            button.setAttribute("class", "btn btn-dark");
+
+            button.setAttribute("id", item)
+            button.innerText = item;
+            button.disabled = true;
+            keypad.appendChild(button);
+        });
+
+        let X = document.getElementById("X");
+        X.setAttribute("style", "color:red;")
+        let V = document.getElementById("V");
+        V.setAttribute("style", "color: #7fff00;");
+
+
+
+
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
