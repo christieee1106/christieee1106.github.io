@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你打LOL嗎</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .card {
+            border: 1px solid black;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .headshot {
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: rgb(7, 6, 6);
+            background-color: rgb(247, 250, 54);
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+        }
+
+        .card-body {
+            background-color: #ddf7af;
+        }
+
+        .card:hover {
+            box-shadow: 8px 8px 15px #808080;
+            transform: translate(5px, 5px);
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.5s;
+        }
+
+        .card:not(:hover) img {
+            transform: scale(1, 1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-body {
+            background-color: lightgreen !important;
+        }
+
+        .card:hover .card-title {
+            color: black;
+            background-color: white !important;
+        }
+
+        
+
+        #description {
+            padding-left: 10px;
+            text-align: justify;
+            font-size:medium;
+        }
+        #LOLImage{
+            width: 465px;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+
+        * {
+            list-style: none;
+        }
+        .container-fluid{
+            margin: auto;
+        }
+        .row{
+            margin-top: 30px;
+            display: flex;
+            justify-content:center
+        }
+        .btn{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class='jumbotron bg-info text-center'>
+            <h1>LOL英雄圖鑑</h1>
+        </div>
+        <button id="btnGetJSON" class="btn btn-success d-flex m-auto btn-lg text-white ">給你看152個英雄</button>
+
+        <div class='row'>
+
+        </div>
+    </div>
+
+
+    <template id='cardLOL'>
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <button href="#" class="btn btn-warning">詳細</a>
+                    <button href="#" class="btn btn-primary">影片</a>
+            </div>
+        </div>
+    </template>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="LOLImage">
+                    <h1 id="description" class="text-dark"></h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="showVideo" tabindex="-1" role="dialog" aria-labelledby="showVideoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="showVideoModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body videodiv">
+                    <img src="">
+                    <h3 id="videohead"></h3>
+                    <p id="video"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script type='module'>
+        import { $g } from '../modules/Mymodules.js';
+        
+
+        const lolJsonUrl =
+            "https://raw.githubusercontent.com/Girro39/Girro39.github.io/main/JS_HW/js_HW_06_LOL/LOL.json";
+
+        let heroesObject;
+        let xhr = new XMLHttpRequest();
+
+        let row = $g('.row');
+        let card = $g('#cardLOL');
+        let modal = $g('#exampleModal');
+        let videomodal = $g('#showVideo');
+        let btnGetHero = $g('#btnGetJSON');
+
+        btnGetJSON.addEventListener('click', () => {
+            requestHeroesJson();
+        });
+
+        function requestHeroesJson() {
+            xhr.onload = function () {
+                heroesObject = JSON.parse(this.responseText);
+                Object.values(heroesObject.data).forEach((item, index) => {
+
+                    cloneCards(item, index);
+
+                });
+            }
+            xhr.open('GET', lolJsonUrl);
+            xhr.send();
+        }
+
+        function cloneCards(item, index) {
+            let cloneCard = card.content.cloneNode(true);
+
+            cloneCard.querySelector('.card-title').innerHTML = `${index + 1}：${item.id}－${item.name}`;
+            cloneCard.querySelector('.card-img-top').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_0.jpg`;
+            cloneCard.querySelector('.card-text').innerText = `${item.blurb.substring(0, 31)}`;
+
+            cloneCard.querySelector('.btn-warning').addEventListener('click', function () {
+                this.setAttribute('data-toggle', 'modal');
+                this.setAttribute('data-target', '#exampleModal');
+                exampleModal(item, index);
+
+            })
+
+            cloneCard.querySelector('.btn-primary').addEventListener('click', function () {
+                this.setAttribute('data-toggle', 'modal');
+                this.setAttribute('data-target', '#showVideo');
+                showVideo(item, index);
+
+            })
+
+
+            row.append(cloneCard);
+
+        }
+
+        function exampleModal(item, index) {
+            modal.querySelector('#exampleModalLabel').innerHTML = `${item.id}－${item.name}`;
+            modal.querySelector('#LOLImage').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_1.jpg`;
+
+            modal.querySelector('#description').innerHTML =`${item.blurb}</br>
+            <li class='mt-4 border-top'>Hp：${item.stats.hp}</li>
+            <li>MoveSpeed：${item.stats.movespeed}</li>
+            <li>Armor：${item.stats.armor}</li>
+            <li>Spellblock：${item.stats.spellblock}</li>
+            <li>AttackRange：${item.stats.attackrange}</li>`;
+
+
+        }
+
+        function showVideo(item, index) {
+            videomodal.querySelector('#showVideoModalLabel').innerText = `${item.id}-${item.name}`;
+            videomodal.querySelector('.videodiv').innerHTML =
+                `<iframe class="w-100" width="560" height="315" src="https://www.youtube.com/embed/nYb2B7N1CKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
