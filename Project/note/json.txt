@@ -1,0 +1,22 @@
+ var studios = [{
+            "name": "CLO.STUDIO",
+            "id": "D-001",
+            "about": "▲91APP/奇摩 / 樂天 / 超級商城 / 蝦皮 ▲各平台 / AD / BN / EDM / 一頁式長條圖 ▲【小資包套A】Banner設計10張 $3, 000 ▲【小資包套B】Banner設計20張 $5,000 ▲【商業包套C】Banner設計50張 $10,000 ▲包裝設計 / 海報設計 / 名片設計 / 圖片後製 ▲尊重客戶喜好, 好溝通, 了解業主時間就是金錢 ●累計接案經驗：15年 ●我的作品集 https://www.tasker.com.tw/workroom/onWRz ●請洽詢謝S ◆LINE ： jpmama321 請LINE與我詳談 ◆MAIL ：jpmama321@hotmail.com",
+            "related-links": [
+                { 'linkname': 'ANGELARIEL Official Site 官方網站', 'linkUrl': 'https://www.angelarielcollection.com/Shop/index.aspx' },
+                { 'linkname': '淘寶台灣7-11取貨頁面', 'linkUrl': 'https://www.taobao.com/market/global/201310_7-eleven.php?spm=a213z.5766593.102490117.14.WgvnLf&ad_id=&am_id=&cm_id=140107270452940bb5c9&pm_id=?spm=a213z.5766593.102490117.14.WgvnLf&ad_id=&am_id=&cm_id=140107270452940bb5c9&pm_id=' },
+                { 'linkname': '朱宗慶豆莢寶寶DoReMi圖文設計', 'linkUrl': 'https://i.imgur.com/WsZfAuB.jpg' }
+            ],
+            "skill": "Illustrator、 Corel Draw、 PhotoShop、 FrontPage、 HTML、 CSS、 InDesign、 Premiere。",
+            "worksinfo": [{
+                "title": "名片、LOGO設計相簿",
+                "image": "https://pic.pimg.tw/juojou/1502296015-3046965360.png",
+                // "count": `${}11筆作品`,
+                "count": "11筆作品",
+                "view": 12402
+            },{
+                "title": "名片、LOGO設計相簿2",
+                "image": "https://pic.pimg.tw/juojou/1502296015-3046965360.png",
+                // "count": `${}11筆作品`,
+                "count": "19筆作品",
+                "view": 12402

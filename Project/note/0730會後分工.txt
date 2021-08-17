@@ -1,0 +1,21 @@
+@section comCSS{
+CSS 不要?獨立出來
+}
+
+
+
+重複的部分 剪下來
+layout
+nav bar 
+...
+
+partioal view 剪下來
+
+----------
+
+一個人一個layout 
+
+nav bar , footer 再去引用
+
+!!把自己的 cshtml檔案建起來
+!!測試自己的mvc套進去ok
