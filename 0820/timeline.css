@@ -12,6 +12,7 @@ body {
   font-size: 17px;
   font-weight: 400;
   background-color: #eee;
+  
 }
 
 h1 {
@@ -19,12 +20,16 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 header {
   background: #3F51B5;
   color: #FFFFFF;
-  padding: 150px 0;
+  padding: 5px 0;
+  margin-top: 20px;
+
 }
 
 header p {
@@ -32,11 +37,18 @@ header p {
   color: rgba(255, 255, 255, 0.2);
   margin-bottom: 0;
   font-size: 60px;
-  margin-top: -30px;
+  /* margin-top: -30px; */
+  text-align: center;
 }
 
 .timeline {
   position: relative;
+}
+img,#v
+{
+  width: 50%;
+  height: 100%;
+  margin-left: 25%;
 }
 
 .timeline::before {
@@ -116,25 +128,6 @@ header p {
   margin-left: -15px;
 }
 
-a {
-  background: #3F51B5;
-  color: #FFFFFF;
-  padding: 8px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  display: inline-block;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
-}
-
-a:hover, a:active, a:focus {
-  background: #32408f;
-  color: #FFFFFF;
-  text-decoration: none;
-}
 
 .timeline-card {
   padding: 0 !important;
@@ -149,10 +142,11 @@ a:hover, a:active, a:focus {
 }
 
 .timeline-item .timeline-img-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("https://picsum.photos/1000/800/?random") center center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat;
+  /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))),  center center no-repeat; */
+  background: linear-gradient(rgba(135, 173, 204, 0), rgba(102, 127, 194, 0.4)),  center center no-repeat;
   background-size: cover;
 }
+/* url("https://picsum.photos/1000/800/?random") */
 
 .timeline-img-header {
   height: 200px;
@@ -161,7 +155,7 @@ a:hover, a:active, a:focus {
 }
 
 .timeline-img-header h2 {
-  color: #FFFFFF;
+  color: #6c64bd;
   position: absolute;
   bottom: 5px;
   left: 20px;
@@ -185,8 +179,19 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
+  .switch-btn
+  {
+    font-size: 90%;
+  }
+  h1{
+    font-size: 95%;
+  }
   .timeline::before {
     left: 50px;
+  }
+  img,#v {
+    width: 100%;
+    margin-left: -1px;
   }
   .timeline .timeline-img {
     left: 50px;
@@ -195,6 +200,9 @@ blockquote {
     max-width: 100%;
     width: auto;
     margin-left: 70px;
+  }
+  .timeline-content h2{
+    color: #06156d;
   }
   .timeline .timeline-item:nth-child(even) .timeline-content {
     float: none;
