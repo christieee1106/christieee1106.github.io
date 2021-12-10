@@ -328,91 +328,7 @@ hr
 {
     text-align: center;
 }
-/*===================================================================================================
-                            team
-=====================================================================================================*/
-#team
-{
-    text-align: center;
-    margin-bottom: 20px;
-}
-#team .team-members h4
-{
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.member-title
-{
-    font-family: "Coda";
-    margin-bottom: 15px;
-}
-#team h2
-{
-    font-weight: normal;
-    text-align: center;
-}
-.team-member-description
-{
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-}
-.team-member-description 
-{
-    line-height: 25px;
-}
-.team-member-contact
-{
-    padding: 20px 0px;
-}
-/* media query te 991 px er niche padding right hobe 45px */
-#team a:hover, #blog a:hover
-{
-    text-decoration: none;
-}
-#team .fa 
-{
-    font-size: 21px;
-}
-#team ul 
-{
-    padding-top: 20px;
-}
-.team-facebook, .team-twitter, .team-google-plus 
-{
-    color: rgb(32, 178, 170);
-} 
-.team-facebook:hover
-{
-    color: #46629E;
-}
-.team-facebook:hover .fa-facebook
-{
-    transform:;
-}
-.team-twitter:hover
-{
-    color: #0EAACE;
-}
-.team-google-plus:hover
-{
-    color: #DD4C39;
-}
-.team-member-contact a {
-    margin: 0px 12px;
-    transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
-}
-/*-----------------------------------------------------------------------------------------------------
-                            Works
---------------------------------------------------------------------------------------------------------*/
-#web, #game, #app
-{
-    display: none;
-}
-.port
-{
-    padding-bottom: 50px;
-}
+
 /*------------------------------------------------------------------------------------------------------
                                 price-table
 --------------------------------------------------------------------------------------------------------*/
@@ -528,245 +444,7 @@ hr
     color: #c63f33;
     text-shadow: 0 1px 1px #f3a39b;
 }
-/*-----------------------------------------------------------------------------------------------------
-                                Blog
--------------------------------------------------------------------------------------------------------*/
 
-#blog 
-{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    font-family: 'Lora', serif;
-}
-.post 
-{
-    width: 90%;
-    margin-bottom: 15px;
-}
-.row-fluid 
-{
-    overflow: hidden;
-    padding: 25px 0px;
-    width: 100%;
-}
-#blog .post .post-thumbnail 
-{
-    overflow: visible !important;
-}
-#blog .post .post-thumbnail .frame, #blog .post .post-thumbnail .frame img 
-{
-    border-radius: 3px;
-    margin-bottom: 0;
-}
-#blog .post .post-thumbnail .frame 
-{
-    padding: 8px;
-    background: #b9b9bb;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-#blog .post .post-thumbnail .post-format 
-{
-    display: block;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    border-radius: 300px;
-    -webkit-border-radius: 300px;
-    -moz-border-radius: 300px;
-    border: 5px solid #b8b8bb;
-    position: absolute;
-    top: -19px;
-    left: -20px;
-    background-color: #d9dad9;
-    z-index: 9999;
-}
-#blog .post .post-thumbnail .post-format span 
-{
-    font-size: 33px;
-    position: relative;
-    top: 2px;
-    color: rgb(32, 178, 170);
-}
-a 
-{
-    outline: none;
-    text-decoration: none;
-}
-#blog .post .post-thumbnail .post-shadow 
-{
-    margin: 0;
-    padding: 0 0 0 18px;
-}
-#blog .post-excerpt 
-{
-    margin-top: 18px;
-    padding-left: 70px;
-}
-#blog .post h2.title a {
-    color: rgb(32, 178, 170);
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 0 1px 1px #f7f7f6;
-    font-family: 'Dosis', sans-serif;
-}
-#blog .post h2.title 
-{
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    font-size: 20px;
-}
-.title 
-{
-    position: relative;
-}
-.line-dotted 
-{
-    border-bottom: 1px dashed #a4a4a4;
-    box-shadow: 0 1px 1px #ffffff;
-    width: 100%;
-    clear: both;
-    margin-top: 19px;
-    margin-bottom: 23px;
-}
-
-.post-share a 
-{
-    padding: 0px 10px;
-    font-size: 18px;
-}
- #blog .post .post-share p 
-{
-    font-weight: bold;
-    float: left;
-    margin-right: 10px;
-}
-/*---------------------------------------------------------------------------------------------------
-                client
-----------------------------------------------------------------------------------------------------*/
-.client-name
-{
-    font-style: italic;
-    font-size: 18px;
-}
-.client-comment 
-{
-    padding: 40px 0px 25px 0px;
-}
-/* ---------------------------------------------------------------------------------------------------
-                            contact
- ---------------------------------------------------------------------------------------------------*/
- .input-group
- {
-    padding: 18px 0px;
- }
- .send
- {
-    float: left;
- }
- .map
- {
-    padding: 18px 0px;
- }
- #contact
- {
-    padding-bottom: 80px;
- }
-.socials-icons 
-{
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    padding-top: 60px;
-
-}   
-.socials-icons li 
-{
-    padding-left: 20px;
-    padding-bottom: 10px;
-    display: inline-block;
-    list-style: none;
-}
-.socials-icons li a 
-{
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    opacity: 0.8;
-}
-.socials-icons li a i.fa 
-{
-    color: #fff;
-    line-height: 50px;
-    font-size: 21px;
-}
-.socials-icons li a:hover 
-{
-    opacity: 1;
-}
-.facebook
-{
-    background-color: #3acab1;
-}
-.facebook:hover
-{
-    background-color: #46629E;
-}
-.twitter
-{
-    background-color: #3acab1;
-}
-.twitter:hover
-{
-    background-color: #0EAACE;
-}
-.google-plus
-{
-    background-color: #3acab1;
-}
-.google-plus:hover
-{
-    background-color: #DD4C39;
-}
-.instagram
-{
-    background-color: #3acab1;
-}
-.instagram:hover
-{
-    background-color: #4A789E;
-}
-.pinterest
-{
-    background-color: #3acab1;
-}
-.pinterest:hover
-{
-    background-color: #CB2027;
-}
-.skype
-{
-    background-color: #3acab1;
-}
-.skype:hover
-{
-    background-color: #01AEF2;
-}
-form
-{
-    width: 100%;
-}
 /*----------------------------------------------------------------------------------------------------
                                     FOOTER
 -----------------------------------------------------------------------------------------------------*/
@@ -829,23 +507,7 @@ form
         font-size: 35px;
     }
 }
-/* 
 
-.shadow-team
-{
-    background-color: #626262;
-    border-radius: 50%;
-    content: "";
-    height: 14px;
-    left: 14px;
-    position: relative;
-    top: 3px;
-    width: 193px;
-}
-
-
-
- */
 
 .ion-ios7-arrow-down {
     color: #fff;
@@ -941,7 +603,7 @@ form
 }
     #price_table li {
         display:table-cell;
-        width:33.333%;
+        width:50%;
         padding:43px 0 0;
         transition: all 0.25s, color 0s !important;
         position:relative;
@@ -985,7 +647,7 @@ form
     
     
     #price_table li strong {
-        font-size:19px;
+        font-size:23px;
         text-transform:uppercase;
         font-family: Raleway;
         color: #2F3740;
@@ -1006,7 +668,7 @@ form
 }
     
     #price_table .price_table-price {
-        font-size:84px;
+        font-size:50px;
         letter-spacing:2px;
         padding-top:20px;
         display:block;
